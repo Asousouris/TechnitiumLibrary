@@ -10,16 +10,17 @@
 
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <Authors>Shreyas Zare</Authors>
+    <Authors>Athan Sousouris</Authors>
     <Company>Technitium</Company>
     <Product>Technitium Library</Product>
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/TechnitiumSoftware/TechnitiumLibrary</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/TechnitiumSoftware/TechnitiumLibrary</RepositoryUrl>
-    <RepositoryType></RepositoryType>
-    <Description></Description>
-    <PackageId>TechnitiumLibrary</PackageId>
-    <Version>5.2</Version>
-    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <PackageReadmeFile></PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TechnitiumLibrary.Net\TechnitiumLibrary.Net.csproj" />
+  </ItemGroup>
 
 </Project>
