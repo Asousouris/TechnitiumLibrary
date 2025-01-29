@@ -17,16 +17,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-using System.Threading.Tasks;
+using System;
 
 namespace TechnitiumLibrary.Net.Dns
 {
-    public interface IDnsCache
+    public class DnsClientResponseSpoofedException : DnsClientResponseValidationException
     {
-        Task<DnsDatagram> QueryClosestDelegationAsync(DnsDatagram request);
+        #region constructors
 
-        Task<DnsDatagram> QueryAsync(DnsDatagram request, bool serveStale = false, bool findClosestNameServers = false, bool resetExpiry = false);
+        public DnsClientResponseSpoofedException()
+            : base()
+        { }
 
-        void CacheResponse(DnsDatagram response, bool isDnssecBadCache = false, string zoneCut = null);
+        public DnsClientResponseSpoofedException(string message)
+            : base(message)
+        { }
+
+        public DnsClientResponseSpoofedException(string message, Exception innerException)
+            : base(message, innerException)
+        { }
+
+        #endregion
     }
 }
